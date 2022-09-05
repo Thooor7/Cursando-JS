@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+<style> 
+        body{ 
+                background: rgb(49, 0, 49);
+                color: white;
+                font: normal 18pt Arial;
+
+        }
+        p {
+                font: 12pt Arial;
+
+        }
+        div#area {
+
+            font: 15pt Arial;
+            width: 150px;
+            height: 100px;
+            background: blue;
+            line-height: 100px;
+            text-align: center;
+
+        }
+
+
+
+
+</style>
+
+</head>
+<body>
+    <h1>Iniciando estudos</h1>
+    <p>Aprendendo a usar <strong>DOM</strong> em Javascript</p> <br>
+    <p>Aqui vai o resultado</p> <br>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="Sair()">Clique em mim</div>
+
+<Script>
+    var p1 = window.document.getElementsByTagName('p')[0]
+    var corpo = document.body
+    var d = window.document.querySelector('div.area')
+    
+
+    
+    var a = window.document.getElementById('area')
+    function clicar() {
+        
+        a.innerText = 'Clicou'
+        a.style.background = 'red'
+    }
+    function entrar() {
+
+            a.innerText = 'Entrou'
+            a.style.background = 'Grey'
+        }
+    function Sair() {
+
+            a.innerText = 'Saiu'
+            a.style.background = 'blue'
+
+    }    
+
+
+</Script>
+
+
+</body>
+</html>
